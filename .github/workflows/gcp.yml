@@ -38,10 +38,10 @@ jobs:
       env:
         GIT_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
       run: |-
-        docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-        docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
-        docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-        docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
+        docker tag $IMAGE_NAME:latest asia-south1-docker.pkg.dev/nice-abbey-421102/test/$IMAGE_NAME:latest
+        docker tag $IMAGE_NAME:latest asia-south1-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
+        docker push asia-south1-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:latest
+        docker push asia-south1-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
 
     - name: Push Docker Image to Artifact Registry
       env:
