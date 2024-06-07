@@ -55,4 +55,4 @@ jobs:
         # docker push asia-south1-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO/$IMAGE_NAME:$GIT_TAG
 
 
-        
+
