@@ -50,9 +50,8 @@ jobs:
       #   GIT_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
       run: |-
         docker tag $IMAGE_NAME asia-south1-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO/$IMAGE_NAME:latest
-        # docker tag $IMAGE_NAME asia-south1-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO/$IMAGE_NAME:$GIT_TAG
         docker push asia-south1-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO/$IMAGE_NAME:latest
-        # docker push asia-south1-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO/$IMAGE_NAME:$GIT_TAG
+        
 
 
 
