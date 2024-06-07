@@ -37,8 +37,8 @@ jobs:
         gcloud auth configure-docker --quiet
         gcloud auth configure-docker asia-south1-docker.pkg.dev --quiet
       
-      env:
-        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
+      # env:
+      #   GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
 
     # - name: Push Docker Image to Container Registry (GCR)
     #   env:
